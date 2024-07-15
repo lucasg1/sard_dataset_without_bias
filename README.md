@@ -10,17 +10,17 @@
 
 These are two code snippets taken from the original SARD Juliet dataset:
 
-<pre>
-<span style="color:grey">/* bad function declaration */</span>
+```CPP
+/* bad function declaration */
 void CWE121_Stack_Based_Buffer_Overflow_dest_char_alloca_cat_51b_badSink (char * data);
 void CWE121_Stack_Based_Buffer_Overflow_dest_char_alloca_cat_51_bad()
-</pre>
+```
 
-<pre>
-<span style="color:grey">/* good function declarations */</span>
+```CPP
+/* good function declarations */
 void CWE121_Stack_Based_Buffer_Overflow_dest_char_alloca_cat_51b_goodG2BSink (char * data);
-<span style="color:red">static</span> void goodG2B()
-</pre>
+static void goodG2B()
+```
 
 The static function appears on 99,7% of the non vulnerable files, while it appears only on 8% of the vulnerable files.
 
@@ -28,16 +28,11 @@ The static function appears on 99,7% of the non vulnerable files, while it appea
 
 This is a code snipper taken after the symbolic representation step:
 
-<pre>
-        ...
-        }
-        printLine(dest);
-    }
-}
-<span style="color:red">void FUN2(){
+```CPP
+void FUN2(){
     FUN0();
     FUN1();
-}</span>
-</pre>
+}
+```
 
 The "cascade" pattern appears on 99,6% of the non vulnerable files, while it appears only on 0,01% of the vulnerable files
