@@ -1,0 +1,28 @@
+void FUN0()
+{
+    int i,k;
+    char data;
+    for(i = 0; i < 1; i++)
+    {
+        data = 'C';
+    }
+    for(k = 0; k < 1; k++)
+    {
+        printHexCharLine(data);
+    }
+}
+void FUN1()
+{
+    int h,j;
+    char data;
+    for(h = 0; h < 1; h++)
+    {
+        data = 'C';
+        printHexCharLine(data);
+    }
+    for(j = 0; j < 1; j++)
+    {
+        data = 'Z';
+        printHexCharLine(data);
+    }
+}

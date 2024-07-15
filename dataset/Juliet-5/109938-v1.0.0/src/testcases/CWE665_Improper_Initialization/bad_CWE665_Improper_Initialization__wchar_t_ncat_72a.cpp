@@ -1,0 +1,36 @@
+using namespace std;
+namespace NAMESPACE0
+{
+void FUN0(vector<wchar_t *> dataVector)
+{
+    wchar_t * data = dataVector[2];
+    {
+        size_t sourceLen;
+        wchar_t source[100];
+        wmemset(source, L'C', 100-1); 
+        source[100-1] = L'\0'; 
+        sourceLen = wcslen(source);
+        wcsncat(data, source, sourceLen);
+        printWLine(data);
+    }
+}
+} 
+using namespace std;
+namespace NAMESPACE0
+{
+void FUN0(vector<wchar_t *> dataVector);
+void FUN2()
+{
+    wchar_t * data;
+    vector<wchar_t *> dataVector;
+    wchar_t dataBuffer[100];
+    data = dataBuffer;
+<START>
+<END>
+    ; 
+    dataVector.insert(dataVector.end(), 1, data);
+    dataVector.insert(dataVector.end(), 1, data);
+    dataVector.insert(dataVector.end(), 1, data);
+    FUN0(dataVector);
+}
+} 

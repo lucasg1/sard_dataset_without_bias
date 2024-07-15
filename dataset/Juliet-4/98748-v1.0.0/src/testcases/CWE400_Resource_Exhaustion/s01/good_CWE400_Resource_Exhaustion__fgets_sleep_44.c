@@ -1,0 +1,43 @@
+void FUN0(int count)
+{
+    SLEEP(count);
+    printLine("Sleep time possibly too long");
+}
+void FUN1()
+{
+    int count;
+    void (*funcPtr) (int) = FUN0;
+    count = -1;
+    count = 20;
+    funcPtr(count);
+}
+void FUN2(int count)
+{
+    if (count > 0 && count <= 2000)
+    {
+        SLEEP(count);
+        printLine("Sleep time OK");
+    }
+    else
+    {
+        printLine("Sleep time too long");
+    }
+}
+void FUN3()
+{
+    int count;
+    void (*funcPtr) (int) = FUN2;
+    count = -1;
+    {
+        char inputBuffer[CHAR_ARRAY_SIZE] = "";
+        if (fgets(inputBuffer, CHAR_ARRAY_SIZE, stdin) != NULL)
+        {
+            count = atoi(inputBuffer);
+        }
+        else
+        {
+            printLine("fgets() failed.");
+        }
+    }
+    funcPtr(count);
+}

@@ -1,0 +1,129 @@
+namespace NAMESPACE0
+{
+void FUN0()
+{
+    TwoIntsClass * data;
+    data = NULL;
+    switch(6)
+    {
+    case 6:
+        data = new TwoIntsClass[100];
+        {
+            size_t i;
+            for(i = 0; i < 100; i++)
+            {
+                data[i].intOne = 1;
+                data[i].intTwo = 2;
+            }
+        }
+        delete [] data;
+        break;
+    default:
+        printLine("Benign, fixed string");
+        break;
+    }
+    switch(8)
+    {
+    case 7:
+        printLine("Benign, fixed string");
+        break;
+    default:
+        ; 
+        break;
+    }
+}
+void FUN1()
+{
+    TwoIntsClass * data;
+    data = NULL;
+    switch(6)
+    {
+    case 6:
+        data = new TwoIntsClass[100];
+        {
+            size_t i;
+            for(i = 0; i < 100; i++)
+            {
+                data[i].intOne = 1;
+                data[i].intTwo = 2;
+            }
+        }
+        delete [] data;
+        break;
+    default:
+        printLine("Benign, fixed string");
+        break;
+    }
+    switch(7)
+    {
+    case 7:
+        ; 
+        break;
+    default:
+        printLine("Benign, fixed string");
+        break;
+    }
+}
+void FUN2()
+{
+    TwoIntsClass * data;
+    data = NULL;
+    switch(5)
+    {
+    case 6:
+        printLine("Benign, fixed string");
+        break;
+    default:
+        data = new TwoIntsClass[100];
+        {
+            size_t i;
+            for(i = 0; i < 100; i++)
+            {
+                data[i].intOne = 1;
+                data[i].intTwo = 2;
+            }
+        }
+        break;
+    }
+    switch(7)
+    {
+    case 7:
+        printIntLine(data[0].intOne);
+        break;
+    default:
+        printLine("Benign, fixed string");
+        break;
+    }
+}
+void FUN3()
+{
+    TwoIntsClass * data;
+    data = NULL;
+    switch(6)
+    {
+    case 6:
+        data = new TwoIntsClass[100];
+        {
+            size_t i;
+            for(i = 0; i < 100; i++)
+            {
+                data[i].intOne = 1;
+                data[i].intTwo = 2;
+            }
+        }
+        break;
+    default:
+        printLine("Benign, fixed string");
+        break;
+    }
+    switch(7)
+    {
+    case 7:
+        printIntLine(data[0].intOne);
+        break;
+    default:
+        printLine("Benign, fixed string");
+        break;
+    }
+}
+} 

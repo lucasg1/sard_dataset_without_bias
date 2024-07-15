@@ -1,0 +1,16 @@
+void FUN0(char * data)
+{
+    if (data != NULL)
+    {
+        strcpy(data, "Initialize");
+        printLine(data);
+        free(data);
+    }
+}
+void FUN1()
+{
+    char * data;
+    data = NULL; 
+    data = (char *)malloc(20*sizeof(char));
+    FUN0(data);
+}

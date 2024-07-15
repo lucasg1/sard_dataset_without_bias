@@ -1,0 +1,24 @@
+void FUN0()
+{
+    int count;
+    int *countPtr1 = &count;
+    int *countPtr2 = &count;
+    count = -1;
+    {
+        int count = *countPtr1;
+        fscanf(stdin, "%d", &count);
+        *countPtr1 = count;
+    }
+    {
+        int count = *countPtr2;
+        {
+            size_t i = 0;
+<START>
+            for (i = 0; i < (size_t)count; i++)
+<END>
+            {
+                printLine("Hello");
+            }
+        }
+    }
+}

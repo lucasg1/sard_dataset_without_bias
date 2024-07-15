@@ -1,0 +1,22 @@
+int64_t * VAR0;
+int64_t * VAR1;
+void FUN0();
+void FUN1()
+{
+    int64_t * data;
+    data = NULL; 
+    data = (int64_t *)malloc(1*sizeof(int64_t));
+    VAR0 = data;
+    FUN0();
+}
+extern int64_t * VAR0;
+extern int64_t * VAR1;
+void FUN0()
+{
+    int64_t * data = VAR0;
+<START>
+    data[0] = 5LL;
+<END>
+    printLongLongLine(data[0]);
+    free(data);
+}

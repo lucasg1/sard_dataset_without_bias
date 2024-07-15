@@ -1,0 +1,38 @@
+namespace NAMESPACE0
+{
+void FUN0()
+{
+    HANDLE data;
+    HANDLE &dataRef = data;
+    data = INVALID_HANDLE_VALUE; 
+    data = CreateFile("GoodSource_w32CreateFile.txt",
+                      (GENERIC_WRITE|GENERIC_READ),
+                      0,
+                      NULL,
+                      OPEN_ALWAYS,
+                      FILE_ATTRIBUTE_NORMAL,
+                      NULL);
+    {
+        HANDLE data = dataRef;
+        CloseHandle(data);
+    }
+}
+void FUN1()
+{
+    HANDLE data;
+    HANDLE &dataRef = data;
+    data = INVALID_HANDLE_VALUE; 
+    data = CreateFile("BadSource_w32CreateFile.txt",
+                      (GENERIC_WRITE|GENERIC_READ),
+                      0,
+                      NULL,
+                      OPEN_ALWAYS,
+                      FILE_ATTRIBUTE_NORMAL,
+                      NULL);
+    CloseHandle(data);
+    {
+        HANDLE data = dataRef;
+        ; 
+    }
+}
+} 
