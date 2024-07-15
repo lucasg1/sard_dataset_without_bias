@@ -1,0 +1,60 @@
+void FUN0(int dataArray[]);
+void FUN1()
+{
+    int data;
+    int dataArray[5];
+    data = -1;
+    data = 7;
+    dataArray[2] = data;
+    FUN0(dataArray);
+}
+void FUN2(int dataArray[]);
+void FUN3()
+{
+    int data;
+    int dataArray[5];
+    data = -1;
+    {
+        char inputBuffer[CHAR_ARRAY_SIZE] = "";
+        if (fgets(inputBuffer, CHAR_ARRAY_SIZE, stdin) != NULL)
+        {
+            data = atoi(inputBuffer);
+        }
+        else
+        {
+            printLine("fgets() failed.");
+        }
+    }
+    dataArray[2] = data;
+    FUN2(dataArray);
+}
+void FUN0(int dataArray[])
+{
+    int data = dataArray[2];
+    {
+        int buffer[10] = { 0 };
+        if (data < 10)
+        {
+            printIntLine(buffer[data]);
+        }
+        else
+        {
+            printLine("ERROR: Array index is too big.");
+        }
+    }
+}
+void FUN2(int dataArray[])
+{
+    int data = dataArray[2];
+    {
+        int buffer[10] = { 0 };
+        if (data >= 0 && data < (10))
+        {
+            printIntLine(buffer[data]);
+        }
+        else
+        {
+            printLine("ERROR: Array index is out-of-bounds");
+        }
+    }
+}

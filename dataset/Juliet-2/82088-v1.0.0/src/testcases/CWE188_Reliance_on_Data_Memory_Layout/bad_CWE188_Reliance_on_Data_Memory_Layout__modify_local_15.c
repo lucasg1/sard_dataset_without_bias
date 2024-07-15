@@ -1,0 +1,26 @@
+void FUN0()
+{
+    switch(6)
+    {
+    case 6:
+    {
+        struct
+        {
+            char charFirst;
+            int intSecond;
+        } structCharInt;
+        char *charPtr;
+        structCharInt.charFirst = 1;
+        charPtr = &structCharInt.charFirst;
+<START>
+        *(int*)(charPtr + sizeof(int)) = 5;
+<END>
+        printIntLine(structCharInt.charFirst);
+        printIntLine(structCharInt.intSecond);
+    }
+    break;
+    default:
+        printLine("Benign, fixed string");
+        break;
+    }
+}

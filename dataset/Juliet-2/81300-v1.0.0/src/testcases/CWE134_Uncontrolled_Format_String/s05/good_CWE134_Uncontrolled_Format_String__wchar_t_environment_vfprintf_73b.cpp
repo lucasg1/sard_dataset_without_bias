@@ -1,0 +1,69 @@
+using namespace std;
+namespace NAMESPACE0
+{
+void FUN0(list<wchar_t *> dataList);
+void FUN1()
+{
+    wchar_t * data;
+    list<wchar_t *> dataList;
+    wchar_t dataBuffer[100] = L"";
+    data = dataBuffer;
+    wcscpy(data, L"fixedstringtest");
+    dataList.push_back(data);
+    dataList.push_back(data);
+    dataList.push_back(data);
+    FUN0(dataList);
+}
+void FUN2(list<wchar_t *> dataList);
+void FUN3()
+{
+    wchar_t * data;
+    list<wchar_t *> dataList;
+    wchar_t dataBuffer[100] = L"";
+    data = dataBuffer;
+    {
+        size_t dataLen = wcslen(data);
+        wchar_t * environment = GETENV(ENV_VARIABLE);
+        if (environment != NULL)
+        {
+            wcsncat(data+dataLen, environment, 100-dataLen-1);
+        }
+    }
+    dataList.push_back(data);
+    dataList.push_back(data);
+    dataList.push_back(data);
+    FUN2(dataList);
+}
+} 
+using namespace std;
+namespace NAMESPACE0
+{
+void FUN5(wchar_t * data, ...)
+{
+    {
+        va_list args;
+        va_start(args, data);
+        vfwprintf(stdout, data, args);
+        va_end(args);
+    }
+}
+void FUN0(list<wchar_t *> dataList)
+{
+    wchar_t * data = dataList.back();
+    FUN5(data, data);
+}
+void FUN7(wchar_t * data, ...)
+{
+    {
+        va_list args;
+        va_start(args, data);
+        vfwprintf(stdout, L"%s", args);
+        va_end(args);
+    }
+}
+void FUN2(list<wchar_t *> dataList)
+{
+    wchar_t * data = dataList.back();
+    FUN7(data, data);
+}
+} 
