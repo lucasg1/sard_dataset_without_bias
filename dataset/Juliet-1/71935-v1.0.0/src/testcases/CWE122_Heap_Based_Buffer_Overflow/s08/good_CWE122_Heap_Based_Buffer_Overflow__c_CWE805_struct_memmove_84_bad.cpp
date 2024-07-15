@@ -1,0 +1,46 @@
+namespace NAMESPACE0
+{
+class NAMESPACE0_FUN0
+{
+public:
+    NAMESPACE0_FUN0(twoIntsStruct * dataCopy);
+    ~NAMESPACE0_FUN0();
+private:
+    twoIntsStruct * data;
+};
+}
+namespace NAMESPACE0
+{
+NAMESPACE0_FUN0::NAMESPACE0_FUN0(twoIntsStruct * dataCopy)
+{
+    data = dataCopy;
+    data = (twoIntsStruct *)malloc(100*sizeof(twoIntsStruct));
+}
+NAMESPACE0_FUN0::~NAMESPACE0_FUN0()
+{
+    {
+        twoIntsStruct source[100];
+        {
+            size_t i;
+            for (i = 0; i < 100; i++)
+            {
+                source[i].intOne = 0;
+                source[i].intTwo = 0;
+            }
+        }
+        memmove(data, source, 100*sizeof(twoIntsStruct));
+        printStructLine(&data[0]);
+        free(data);
+    }
+}
+}
+namespace NAMESPACE0
+{
+void FUN0()
+{
+    twoIntsStruct * data;
+    data = NULL;
+    NAMESPACE0_FUN0 * VAR3 =  new NAMESPACE0_FUN0(data);
+    delete VAR3;
+}
+} 

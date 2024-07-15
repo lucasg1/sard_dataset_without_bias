@@ -1,0 +1,21 @@
+static int staticFive = 5;
+namespace NAMESPACE0
+{
+void FUN0()
+{
+    int * data;
+    data = NULL;
+    if(staticFive==5)
+    {
+        data = new int[50];
+    }
+    {
+        int source[100] = {0}; 
+<START>
+        memcpy(data, source, 100*sizeof(int));
+<END>
+        printIntLine(data[0]);
+        delete [] data;
+    }
+}
+} 
