@@ -1,0 +1,9 @@
+void FUN0()
+{
+    goto sink;
+sink:
+    if (RENAME(OLD_GOOD_FILE_NAME, NEW_GOOD_FILE_NAME) != 0)
+    {
+        printLine("rename failed!");
+    }
+}

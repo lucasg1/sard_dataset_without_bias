@@ -1,0 +1,34 @@
+static int FUN0()
+{
+    return 1;
+}
+static int FUN1()
+{
+    return 0;
+}
+void FUN2()
+{
+    if(FUN0())
+    {
+        {
+            wchar_t * keyName = L"TEST\\TestKey";
+            HUSKEY hKey;
+<START>
+            if (SHRegOpenUSKeyW(
+<END>
+                        keyName,
+                        KEY_WRITE,
+                        NULL,
+                        &hKey,
+                        TRUE) != ERROR_SUCCESS)
+            {
+                printLine("Registry key could not be opened");
+            }
+            else
+            {
+                printLine("Registry key opened successfully");
+                SHRegCloseUSKey(hKey);
+            }
+        }
+    }
+}
