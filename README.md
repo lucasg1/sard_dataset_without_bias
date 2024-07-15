@@ -1,4 +1,9 @@
-### Brief review of all techniques used to clean the SARD Juliet C/C++ 1.3 dataset
+This is the dataset used in an work submitted to the Symposium on Knowledge Discovery, Mining and Learning (KDMiLe) 2024. The proposed article title is: **Evaluating Biased Synthetic Data Effects on Large
+Language Model-based Software Vulnerability Detection**.
+
+
+
+### Brief review of all techniques used to clean bias of the [SARD Juliet C/C++ 1.3 dataset](https://samate.nist.gov/SARD/test-suites/112)
 
 1. A vulnerability delimiter is written between the vulnerable lines. \<START\> is placed immediately before the vulnerability and \<END\> is placed after.
 2. The directives #ifndef are used to separate "good" and "bad" files. Each test case has a "good" and a "bad" file.
