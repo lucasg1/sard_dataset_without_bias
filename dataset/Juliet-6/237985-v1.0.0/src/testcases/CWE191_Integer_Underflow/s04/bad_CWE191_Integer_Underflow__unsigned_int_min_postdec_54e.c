@@ -1,0 +1,33 @@
+void FUN0(unsigned int data);
+void FUN1(unsigned int data)
+{
+    FUN0(data);
+}
+void FUN1(unsigned int data);
+void FUN3()
+{
+    unsigned int data;
+    data = 0;
+    data = 0;
+    FUN1(data);
+}
+void FUN4(unsigned int data);
+void FUN5(unsigned int data)
+{
+    FUN4(data);
+}
+void FUN5(unsigned int data);
+void FUN0(unsigned int data)
+{
+    FUN5(data);
+}
+void FUN4(unsigned int data)
+{
+    {
+<START>
+        data--;
+<END>
+        unsigned int result = data;
+        printUnsignedLine(result);
+    }
+}

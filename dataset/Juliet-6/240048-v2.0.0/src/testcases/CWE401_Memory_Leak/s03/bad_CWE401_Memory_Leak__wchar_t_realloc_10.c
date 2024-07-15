@@ -1,0 +1,18 @@
+void FUN0()
+{
+    wchar_t * data;
+    data = NULL;
+    if(globalTrue)
+    {
+        data = (wchar_t *)realloc(data, 100*sizeof(wchar_t));
+        if (data == NULL) {exit(-1);}
+        wcscpy(data, L"A String");
+        printWLine(data);
+    }
+    if(globalTrue)
+    {
+<START>
+<END>
+        ; 
+    }
+}

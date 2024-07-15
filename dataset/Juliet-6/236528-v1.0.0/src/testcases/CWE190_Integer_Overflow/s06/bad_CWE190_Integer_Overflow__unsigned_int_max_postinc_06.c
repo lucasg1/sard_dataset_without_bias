@@ -1,0 +1,20 @@
+static const int STATIC_CONST_FIVE = 5;
+void FUN0()
+{
+    unsigned int data;
+    data = 0;
+    if(STATIC_CONST_FIVE==5)
+    {
+        data = UINT_MAX;
+    }
+    if(STATIC_CONST_FIVE==5)
+    {
+        {
+<START>
+            data++;
+<END>
+            unsigned int result = data;
+            printUnsignedLine(result);
+        }
+    }
+}

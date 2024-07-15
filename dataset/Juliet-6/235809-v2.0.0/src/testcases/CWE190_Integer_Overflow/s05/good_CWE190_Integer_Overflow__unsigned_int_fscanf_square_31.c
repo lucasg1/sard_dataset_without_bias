@@ -1,0 +1,33 @@
+void FUN0()
+{
+    unsigned int data;
+    data = 0;
+    data = 2;
+    {
+        unsigned int dataCopy = data;
+        unsigned int data = dataCopy;
+        {
+            unsigned int result = data * data;
+            printUnsignedLine(result);
+        }
+    }
+}
+void FUN1()
+{
+    unsigned int data;
+    data = 0;
+    fscanf (stdin, "%u", &data);
+    {
+        unsigned int dataCopy = data;
+        unsigned int data = dataCopy;
+        if (abs((long)data) < (long)sqrt((double)UINT_MAX))
+        {
+            unsigned int result = data * data;
+            printUnsignedLine(result);
+        }
+        else
+        {
+            printLine("data value is too large to perform arithmetic safely.");
+        }
+    }
+}

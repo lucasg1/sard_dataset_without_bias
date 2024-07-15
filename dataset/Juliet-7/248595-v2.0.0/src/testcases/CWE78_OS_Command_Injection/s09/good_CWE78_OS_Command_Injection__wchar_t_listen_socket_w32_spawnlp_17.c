@@ -1,0 +1,12 @@
+void FUN0()
+{
+    int h;
+    wchar_t * data;
+    wchar_t dataBuffer[100] = COMMAND_ARG2;
+    data = dataBuffer;
+    for(h = 0; h < 1; h++)
+    {
+        wcscat(data, L"*.*");
+    }
+    _wspawnlp(_P_WAIT, COMMAND_INT, COMMAND_INT, COMMAND_ARG1, COMMAND_ARG3, NULL);
+}

@@ -1,0 +1,32 @@
+void FUN0()
+{
+    char * data;
+    char data_buf[100] = FULL_COMMAND;
+    data = data_buf;
+    switch(6)
+    {
+    case 6:
+    {
+        size_t dataLen = strlen(data);
+        char * environment = GETENV(ENV_VARIABLE);
+        if (environment != NULL)
+        {
+            strncat(data+dataLen, environment, 100-dataLen-1);
+        }
+    }
+    break;
+    default:
+        printLine("Benign, fixed string");
+        break;
+    }
+    {
+        FILE *pipe;
+<START>
+        pipe = POPEN(data, "w");
+<END>
+        if (pipe != NULL)
+        {
+            PCLOSE(pipe);
+        }
+    }
+}

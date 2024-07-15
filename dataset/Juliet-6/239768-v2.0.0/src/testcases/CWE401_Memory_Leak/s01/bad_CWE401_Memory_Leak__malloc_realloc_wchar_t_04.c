@@ -1,0 +1,23 @@
+static const int STATIC_CONST_TRUE = 1; 
+static const int STATIC_CONST_FALSE = 0; 
+void FUN0()
+{
+    if(STATIC_CONST_TRUE)
+    {
+        {
+            wchar_t * data = (wchar_t *)malloc(100*sizeof(wchar_t));
+            if (data == NULL) {exit(-1);}
+            wcscpy(data, L"A String");
+            printWLine(data);
+<START>
+            data = (wchar_t *)realloc(data, (130000)*sizeof(wchar_t));
+<END>
+            if (data != NULL)
+            {
+                wcscpy(data, L"New String");
+                printWLine(data);
+                free(data);
+            }
+        }
+    }
+}

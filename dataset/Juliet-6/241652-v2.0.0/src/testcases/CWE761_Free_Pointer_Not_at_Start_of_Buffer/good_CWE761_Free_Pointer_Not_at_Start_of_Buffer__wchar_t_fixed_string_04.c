@@ -1,0 +1,52 @@
+static const int STATIC_CONST_TRUE = 1; 
+static const int STATIC_CONST_FALSE = 0; 
+void FUN0()
+{
+    wchar_t * data;
+    data = (wchar_t *)malloc(100*sizeof(wchar_t));
+    if (data == NULL) {exit(-1);}
+    data[0] = L'\0';
+    wcscpy(data, BAD_SOURCE_FIXED_STRING);
+    if(STATIC_CONST_FALSE)
+    {
+        printLine("Benign, fixed string");
+    }
+    else
+    {
+        {
+            size_t i;
+            for (i=0; i < wcslen(data); i++)
+            {
+                if (data[i] == SEARCH_CHAR)
+                {
+                    printLine("We have a match!");
+                    break;
+                }
+            }
+            free(data);
+        }
+    }
+}
+void FUN1()
+{
+    wchar_t * data;
+    data = (wchar_t *)malloc(100*sizeof(wchar_t));
+    if (data == NULL) {exit(-1);}
+    data[0] = L'\0';
+    wcscpy(data, BAD_SOURCE_FIXED_STRING);
+    if(STATIC_CONST_TRUE)
+    {
+        {
+            size_t i;
+            for (i=0; i < wcslen(data); i++)
+            {
+                if (data[i] == SEARCH_CHAR)
+                {
+                    printLine("We have a match!");
+                    break;
+                }
+            }
+            free(data);
+        }
+    }
+}

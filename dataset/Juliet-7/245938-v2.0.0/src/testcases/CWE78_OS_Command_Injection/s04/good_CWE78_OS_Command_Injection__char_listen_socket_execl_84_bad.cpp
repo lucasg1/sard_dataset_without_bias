@@ -1,0 +1,34 @@
+namespace NAMESPACE0
+{
+NAMESPACE0_FUN0::NAMESPACE0_FUN0(char * dataCopy)
+{
+    data = dataCopy;
+    strcat(data, "*.*");
+}
+NAMESPACE0_FUN0::~NAMESPACE0_FUN0()
+{
+    EXECL(COMMAND_INT_PATH, COMMAND_INT_PATH, COMMAND_ARG1, COMMAND_ARG3, NULL);
+}
+}
+namespace NAMESPACE0
+{
+void FUN0()
+{
+    char * data;
+    char dataBuffer[100] = COMMAND_ARG2;
+    data = dataBuffer;
+    NAMESPACE0_FUN0 * VAR2 =  new NAMESPACE0_FUN0(data);
+    delete VAR2;
+}
+} 
+namespace NAMESPACE0
+{
+class NAMESPACE0_FUN0
+{
+public:
+    NAMESPACE0_FUN0(char * dataCopy);
+    ~NAMESPACE0_FUN0();
+private:
+    char * data;
+};
+}

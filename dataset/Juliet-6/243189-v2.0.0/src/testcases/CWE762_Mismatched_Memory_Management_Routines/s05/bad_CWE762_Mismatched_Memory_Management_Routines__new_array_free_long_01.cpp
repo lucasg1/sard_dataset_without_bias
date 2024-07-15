@@ -1,0 +1,12 @@
+namespace NAMESPACE0
+{
+void FUN0()
+{
+    long * data;
+    data = NULL;
+    data = new long[100];
+<START>
+    free(data);
+<END>
+}
+} 

@@ -1,0 +1,21 @@
+namespace NAMESPACE0
+{
+char * FUN0(char * data)
+{
+    data = new char;
+    return data;
+}
+} 
+namespace NAMESPACE0
+{
+char * FUN0(char * data);
+void FUN2()
+{
+    char * data;
+    data = NULL;
+    data = FUN0(data);
+<START>
+    free(data);
+<END>
+}
+} 

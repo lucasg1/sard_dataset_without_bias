@@ -1,0 +1,18 @@
+namespace NAMESPACE0
+{
+void FUN0()
+{
+    char * data;
+    data = NULL;
+    if(globalFive==5)
+    {
+        data = new char[100];
+    }
+    if(globalFive==5)
+    {
+<START>
+        free(data);
+<END>
+    }
+}
+} 
