@@ -22,11 +22,11 @@ void CWE121_Stack_Based_Buffer_Overflow_dest_char_alloca_cat_51b_goodG2BSink (ch
 static void goodG2B()
 ```
 
-The static function appears on 99,7% of the non vulnerable files, while it appears only on 8% of the vulnerable files.
+Basically we noticed that the non vulnerable files have a `static void` function, while the vulnerable ones don't. The static function appears on 99,7% of the non vulnerable files, while it appears only on 8% of the vulnerable files.
 
 - "Cascade" pattern:
 
-This is a code snipper taken after the symbolic representation step:
+We noticed that after some data processing, specifally after the symbolic representation step, that a pattern appeared at the end of each non vulnerable file:
 
 ```CPP
 void FUN2(){
@@ -35,4 +35,4 @@ void FUN2(){
 }
 ```
 
-The "cascade" pattern appears on 99,6% of the non vulnerable files, while it appears only on 0,01% of the vulnerable files
+The "cascade" pattern appears on 99,6% of the non vulnerable files, while it appears only on 0,01% of the vulnerable files.
