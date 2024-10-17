@@ -1,4 +1,4 @@
-This is the dataset used in an work submitted to the Symposium on Knowledge Discovery, Mining and Learning (KDMiLe) 2024. The proposed article title is: **Evaluating Biased Synthetic Data Effects on Large
+This is the dataset used in an work submitted to the 17th International Conference on Agents and Artificial Intelligence (ICAART). The proposed article title is: **Evaluating Biased Synthetic Data Effects on Large
 Language Model-based Software Vulnerability Detection**.
 
 
